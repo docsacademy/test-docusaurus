@@ -4,7 +4,7 @@ In this tutorial, you will learn how to use Git, GitHub, and Netlify to deploy y
 
 ## Initialize your Git repository
 
-Before deploying your site, ensure that your site is version-controlled with Git.
+Before deploying your site, ensure that your project (all your Docusaurus-related files) is version-controlled with Git.
 
 1. Navigate to your site directory:
 
@@ -34,6 +34,8 @@ Next, create a remote repository on GitHub to host your project.
 
 1. Log in to GitHub and create a new repository. <br />
    Choose a repository name (for example, **my-docusaurus-website**) and set it to public or private as needed.
+
+   ![Creating a new GitHub repository](images/creating-new-git-repository.png)
    
 2. Link your local repository to GitHub. Replace `your-username` and `repository-name` with your GitHub username and the repository name you just created.
 
@@ -48,7 +50,9 @@ Next, create a remote repository on GitHub to host your project.
     git push -u origin main
     ```
 
-This step ensures your website’s source code is safely stored and accessible online.
+This step ensures your website’s source code is safely stored and accessible online via GitHub.
+
+![Files in the GitHub remote repository](images/remote-repository.png)
 
 ## Connect your repository to Netlify
 
@@ -57,21 +61,29 @@ Netlify provides an efficient way to deploy static sites with continuous deploym
 1. Sign up or log in to Netlify. <br />
    Visit Netlify and log in with your credentials. If you are new to Netlify, you can sign up for a free account.
 
+   ![Logging in to Netlify](images/netlify-login.png)
+
 2. Create a new site from Git:
 
-   - Click on **New site from Git** on your Netlify dashboard.
-   - Select GitHub as your Git provider and authorize Netlify to access your GitHub repositories if needed.
-   - Choose the repository that contains your Docusaurus project.
+   - Click on **Import existing project** on your Netlify dashboard.
 
-3. Configure build settings. <br />
-   Netlify will prompt you for build commands and the publish directory.
+   ![Adding a new site](images/adding-new-site.png)
 
-    - Use the Docusaurus build command: <br />
-    `npm run build`
-    - Enter the default output directory for Docusaurus: <br />
-    `build`
+   - Select **GitHub** as your Git provider and authorize Netlify to access your GitHub repositories if needed.
 
-4. Deploy your site by clicking **Deploy site**. <br />
+   ![Connecting to a Git provider](images/connecting-to-git-provider.png)
+
+   - Authorize Netlify to access your GitHub account.
+
+   - Choose the repository that contains your Docusaurus project and click **Install**.
+
+   ![Installing Netlify in the repository](images/install-netlify-in-repository.png)
+
+3. On the **Let’s deploy your project with** screen, specify the name of your website. Leave all other settings as is. <br />
+   
+   ![Entering your website name](images/entering-website-name.png)
+
+4. Deploy your site by clicking **Deploy website_name**. <br />
 
 Netlify will clone your GitHub repository, run the build command, and deploy your site. The process typically takes a few minutes.
 
